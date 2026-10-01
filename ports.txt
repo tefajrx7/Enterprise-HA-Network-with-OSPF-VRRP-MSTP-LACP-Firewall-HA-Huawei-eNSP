@@ -1,0 +1,107 @@
+phase-HQ
+between HQ-1>s3/0/0  and ISP-3>s3/0/0
+between HQ-1>g0/0/0 and LSW-HQ>g0/0/3
+between HQ-2>s3/0/0 and ISP-3>s3/0/1
+bet HQ-2>g0/0/0 and LSW-HQ>g0/0/2
+bet HQ-3>s3/0/0 and ISP-3>s4/0/0
+bet HQ-3>g0/0/0 and LSW-HQ>g0/0/1
+bet LSW-HQ>g0/0/5 and FW-HQ-2>g0/0/0
+bet LSW-HQ>g0/0/4 and FW-HQ-1>g0/0/0
+bet FW-HQ-1>g1/0/0 and FW-HQ-2>g1/0/0
+bet FW-HQ-1>g1/0/4 and LSW-HQ-DMZ>g0/0/1
+bet FW-HQ-1>g1/0/3 and LSW-HQ-2>g0/0/3
+bet FW-HQ-1>g1/0/2 and LSW-HQ-1>g0/0/2
+bet FW-HQ-1>g1/0/1 and LSW-HQ-1>g0/0/1
+bet FW-HQ-2>g1/0/3 and LSW-HQ-1>g0/0/3
+bet FW-HQ-2>g1/0/4 and LSW-HQ-DMZ>g0/0/2
+bet FW-HQ-2>g1/0/2 and LSW-HQ-2>g0/0/2
+bet FW-HQ-2>g1/0/1 and LSW-HQ-2>g0/0/1
+bet LSW-HQ-DMZ>g0/0/4 and server2>ethernet0/0/0
+bet LSW-HQ-DMZ>g0/0/5 and server3>ethernet0/0/0
+bet LSW-HQ-DMZ>g0/0/3 and server1>ethernet0/0/0
+bet LSW-HQ-1>g0/0/6 and LSW-HQ-2>g0/0/6
+bet LSW-HQ-1>g0/0/4 and LSW-HQ-2>g0/0/4
+bet LSW-HQ-1>g0/0/5 and LSW-HQ-2>g0/0/5
+bet LSW-HQ-1>g0/0/7 and HQ-LSW1>g0/0/1
+bet LSW-HQ-1>g0/0/8 and HQ-LSW2>g0/0/1
+bet LSW-HQ-1>g0/0/9 and HQ-LSW3>g0/0/1
+bet LSW-HQ-1>g0/0/10 and HQ-LSW4>g0/0/1
+bet LSW-HQ-1>g0/0/11 and HQ-LSW5>g0/0/1
+bet LSW-HQ-2>g0/0/11 and HQ-LSW1>g0/0/2
+bet LSW-HQ-2>g0/0/10 and HQ-LSW2>g0/0/2
+bet LSW-HQ-2>g0/0/9 and HQ-LSW3>g0/0/2
+bet LSW-HQ-2>g0/0/8 and HQ-LSW4>g0/0/2
+bet LSW-HQ-2>g0/0/7 and HQ-LSW5>g0/0/2
+bet HQ-LSW1>eth0/0/1 and PC6>ether0/0/1
+bet HQ-LSW1>eth0/0/2 and HQ-AP1>g0/0/0
+bet HQ-LSW1>eth0/0/3 and HQ-LSW2>eth0/0/4
+bet HQ-LSW2>eth0/0/2 and HQ-AP2>g0/0/0
+bet HQ-LSW2>eth0/0/3 and PC7>eth0/0/1
+bet HQ-LSW2>eth0/0/1 and HQ-LSW3>eth0/0/1
+bet HQ-LSW3>eth0/0/2 and HQ-AP3>g0/0/0
+bet HQ-LSW3>eth0/0/3 and PC8>eth0/0/1
+bet HQ-LSW3>eth0/0/4 and HQ-LSW4>eth0/0/4
+bet HQ-LSW4>eth0/0/2 and HQ-AP4>g0/0/0
+bet HQ-LSW4>eth0/0/3 and PC9>eth0/0/1
+bet HQ-LSW4>eth0/0/1 and HQ-LSW5>eth0/0/1
+bet HQ-LSW5>eth0/0/3 and HQ-AP5>g0/0/0
+bet HQ-LSW5>eth0/0/2 and PC10>eth0/0/1
+
+
+phase ISP
+bet ISP-3>s2/0/1 and ISP-4>s3/0/0
+bet ISP-3>s2/0/0 and ISP-2>s2/0/1
+bet ISP-2>s2/0/0 and ISP-1>s3/0/0
+bet ISP-4>s3/0/1 and ISP-5>s2/0/0
+bet ISP-5>s2/0/1 and BR2-1>s3/0/0
+bet ISP-5>s3/0/0 and BR2-2>s3/0/0
+bet ISP-1>s2/0/1 and BR1-2>s3/0/0
+bet ISP-1>s2/0/0 and BR1-1>s3/0/0
+
+
+
+
+phase BR1
+bet BR1-1>g0/0/0 and LSW-BR1-1>g0/0/1
+bet BR1-2>g0/0/0 and LSW-BR1-1>g0/0/4
+bet LSW-BR1-1>g0/0/2 and FW-BR1-1>g0/0/0
+bet LSW-BR1-1>g0/0/3 and FW-BR1-1>g1/0/0
+bet FW-BR1-1>g1/0/2 and LSW-BR1-2>g0/0/2
+bet FW-BR1-1>g1/0/1 and LSW-BR1-2>g0/0/1
+bet LSW-BR1-2>g0/0/4 and BR1-LSW1>g0/0/1
+bet LSW-BR1-2>g0/0/5 and BR1-LSW2>g0/0/1
+bet LSW-BR1-2>g0/0/3 and BR1-LSW3>g0/0/1
+bet BR1-LSW1>eth0/0/1 and BR1-LSW2>eth0/0/1
+bet BR1-LSW1>eth0/0/2 and PC1>eth0/0/1
+bet BR1-LSW1>eth0/0/3 and PC2>eth0/0/1
+bet BR1-LSW1>g0/0/2 and BR1-AP1>g0/0/0
+bet BR1-LSW2>g0/0/2 and BR1-LSW3>g0/0/2
+bet BR1-LSW2>eth0/0/3 and PC3>eth0/0/1
+bet BR1-LSW2>eth0/0/2 and BR1-AP2>g0/0/0
+bet BR1-LSW3>eth0/0/1 and BR1-AP3>g0/0/0
+bet BR1-LSW3>eth0/0/3 and PC5>eth0/0/1
+bet BR1-LSW3>eth0/0/2 and PC4>eth0/0/1
+
+
+
+
+
+phase BR2
+bet BR2-1>g0/0/0 and LSW-BR2-1>g0/0/1
+bet BR2-2>g0/0/0 and LSW-BR2-1>g0/0/2
+bet LSW-BR2-1>g0/0/3 and FW-BR2-1>g0/0/0
+bet LSW-BR2-1>g0/0/4 and FW-BR2-1>g1/0/0
+bet FW-BR2-1>g1/0/2 and LSW-BR2-2>g0/0/2
+bet FW-BR2-1>g1/0/1 and LSW-BR2-2>g0/0/1
+bet LSW-BR2-2>g0/0/3 and BR2-LSW1>g0/0/1
+bet LSW-BR2-2>g0/0/4 and BR2-LSW2>g0/0/2
+bet LSW-BR2-2>g0/0/5 and BR2-LSW3>g0/0/1
+bet BR2-LSW1>eth0/0/1 and BR2-AP1>g0/0/0
+bet BR2-LSW1>g0/0/2 and BR2-LSW2>g0/0/1
+bet BR2-LSW1>eth0/0/2 and PC11>eth0/0/1
+bet BR2-LSW2>eth0/0/1 and BR2-LSW3>eth0/0/1
+bet BR2-LSW2>eth0/0/3 and PC12>eth0/0/1
+bet BR2-LSW2>eth0/0/2 and BR2-AP2>g0/0/0
+bet BR2-LSW3>eth0/0/2 and BR2-AP3>g0/0/0
+bet BR2-LSW3>eth0/0/3 and PC13>eth0/0/1
+
